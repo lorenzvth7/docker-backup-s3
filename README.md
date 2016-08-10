@@ -43,7 +43,7 @@ content of backup.sh
 
 # start backup container + define env variables
 docker run --rm \
--v /home/lorenz/folder:/backup \
+-v /my/path/to/backup:/backup \
 -e AWS_ACCESS_KEY_ID=<aws-access-key-id> \
 -e AWS_SECRET_ACCESS_KEY=<aws-sercret-key> \
 -e AWS_DEFAULT_REGION=<region> \
