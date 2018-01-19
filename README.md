@@ -1,4 +1,6 @@
-# docker-backup
+[![Build Status](https://travis-ci.org/lvthillo/docker-backup-s3.svg?branch=master)](https://travis-ci.org/lvthillo/docker-backup-s3)
+
+# docker-backup-s3
 A way to create backups of folders (e.g. docker volumes). 
 
 Prerequisitions:
@@ -7,7 +9,7 @@ Prerequisitions:
 
 #### Build the image
 ```
-docker build -t backup-s3 .
+docker build -t lvthillo/backup-s3 .
 ```
 
 #### Fill in the env.txt 
@@ -24,7 +26,7 @@ S3BUCKET=<name-of-s3-bucket>
 docker run --rm \
 -v /path/to/folder:/backup \
 --env-file env.txt
-backup-s3
+lvthillo/backup-s3
 ```
 
 This will create a tarball of your specified folder and upload it to your specified s3bucket. If the bucket does not exist it will be created.
