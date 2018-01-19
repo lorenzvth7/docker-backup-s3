@@ -9,7 +9,7 @@ install:
 
 before_script:
   - env | sort
-  - image="lvthillo/backup-s3:$VERSION
+  - image="lvthillo/backup-s3:$VERSION"
 
 script:
   - travis_retry docker build -t "$image"
