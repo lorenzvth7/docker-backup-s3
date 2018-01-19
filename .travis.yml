@@ -5,11 +5,10 @@ env:
 - VERSION=1.0
 
 install:
-  - git clone https://github.com/lvthillo/docker-backup-s3.git ~/official-images
+  - git clone https://github.com/lvthillo/docker-backup-s3.git
 
 before_script:
   - env | sort
-  - cd "$VERSION"
   - image="lvthillo/backup-s3:$VERSION
 
 script:
