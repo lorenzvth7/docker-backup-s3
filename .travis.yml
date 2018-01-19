@@ -9,6 +9,7 @@ install:
 
 before_script:
   - env | sort
+  - cd docker-backup-s3
   - image="lvthillo/backup-s3:$VERSION"
 
 script:
